@@ -3,6 +3,9 @@
 
 ## Quickstart
 
+```shell
+docker compose up
+```
 
 ## .env file
 
