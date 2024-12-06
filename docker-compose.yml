@@ -1,0 +1,27 @@
+services:
+  backend:
+    restart: unless-stopped
+    build: ./src-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+    depends_on:
+      - mongodb
+
+  frontend:
+    restart: unless-stopped
+    build: ./src-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  mongodb:
+    image: mongo:8
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=arunmongo
+      - MONGO_INITDB_ROOT_PASSWORD=arunrocks
