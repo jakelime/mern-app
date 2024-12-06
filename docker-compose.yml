@@ -1,6 +1,8 @@
 services:
   backend:
     restart: unless-stopped
+    env_file:
+      - ./src-backend/.env
     build: ./src-backend
     ports:
       - "5000:5000"
