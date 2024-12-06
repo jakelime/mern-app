@@ -1,0 +1,6 @@
+[submodule "src-backend"]
+	path = src-backend
+	url = git@github.com:jakelime/my-express-app.git
+[submodule "src-frontend"]
+	path = src-frontend
+	url = git@github.com:jakelime/my-react-app.git
